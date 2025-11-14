@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+@theme {
+
+    @keyframes blink-border {
+        0%, 100% {
+          border-color: rgb(0, 0, 0);
+          transform: scale(1);
+
+        }
+        50% {
+          border-color: transparent;
+          transform: scale(1.05);
+        }
+    }
+    
+    --animate-border : blink-border 1.5s linear infinite;
+}
+
+
+@layer components {
+    .btn-container {
+        @apply mt-10 p-2 
+    }
+    .btn-container button:hover, .btn-container button:focus{
+     @apply animate-border 
+    }
+
+    .game-board button{
+        @apply text-lg inline-flex justify-center w-40 m-2 py-2 border border-black rounded-full font-normal bg-white
+        md:text-4xl md:w-xs
+        lg:text-3xl lg:w-xs lg:p-2 lg:font-normal
+        cursor-pointer
+    }
+
+}
+
+@layer base{
+    button {
+        @apply text-3xl inline-flex justify-center w-3xs m-2 p-2 border border-black rounded-full font-normal bg-white
+        md:text-4xl md:w-xs
+        lg:text-3xl lg:w-xs lg:p-2 lg:font-normal
+        cursor-pointer
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
