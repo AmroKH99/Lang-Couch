@@ -28,7 +28,7 @@
     }
 
     .game-board button{
-        @apply text-lg inline-flex justify-center w-40 m-2 py-2 border border-black rounded-full font-normal bg-white
+        @apply text-lg inline-flex justify-center w-32 m-2 py-2 border border-black rounded-full font-normal bg-white
         md:text-4xl md:w-xs
         lg:text-3xl lg:w-xs lg:p-2 lg:font-normal
         cursor-pointer

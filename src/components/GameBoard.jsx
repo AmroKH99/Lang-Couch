@@ -80,7 +80,7 @@ const GameBoard = ({ words, onAllMatchesDone }) => {
     <div className='game-board h-full flex flex-col justify-center'>
       
       <div className="text-white flex flex-col justify-center items-center">
-        <h1 className="text-2xl font-bold mb-8 md:text-3xl lg:text-4xl">Hehee (Michael jackson laugh)</h1>
+        <h1 className="text-xl font-bold mb-8 md:text-3xl lg:text-4xl">Hehee (Michael jackson laugh)</h1>
       </div>
 
 
@@ -110,7 +110,7 @@ const GameBoard = ({ words, onAllMatchesDone }) => {
 
         {/* Translation words side - shuffled */}
         <div className="flex-1">
-          <h3 className="text-center text-xl mb-4 text-white">Arabic Translations</h3>
+          <h3 className="text-center text-xl mb-4 text-white">Arabic</h3>
           <div className="flex flex-col justify-center items-center">
             {shuffledTranslations.map((word, index) => (
               <button
