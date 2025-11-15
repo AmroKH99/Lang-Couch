@@ -14,10 +14,10 @@ function LangSelect ({onLanguageSelect}){
 
 <SplitText
   text="Hello & Welcome From THE KH"
-  className="text-4xl text-center mb-2 p-2 font-semibold text-red-500
-         sm:text-4xl sm:text-green-500
-         md:text-6xl md:text-blue-500 
-         lg:text-6xl lg:text-white"
+  className="text-4xl text-center mb-2 p-2 font-semibold text-white
+         sm:text-4xl
+         md:text-6xl 
+         lg:text-6xl"
   delay={100}
   duration={0.6}
   ease="power3.out"
