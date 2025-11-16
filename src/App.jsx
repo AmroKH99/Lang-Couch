@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import DarkVeil from "./components/DarkVeil";
 import LangSelect from "./components/LangSelect";
 import LevelSelect from "./components/LevelSelect";
