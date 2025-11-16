@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DarkVeil from "./components/DarkVeil";
 import LangSelect from "./components/LangSelect";
 import LevelSelect from "./components/LevelSelect";
@@ -11,6 +11,15 @@ const App = () => {
     language: '',
     difficulty: ''
   });
+  const [reset , setReset]= useState(false);
+  
+  const handleReset = () => {
+      setReset(true);
+      setCurrentScreen('header');
+      setUserSelections(prev => (prev={language: '', difficulty:''}));
+      setReset(false)
+    
+  }
 
   const handleLanguageSelect = (language) => {
     setUserSelections(prev => ({ ...prev, language: language }));
@@ -38,7 +47,7 @@ const App = () => {
           <LevelSelect onDifficultySelect={handleDifficultySelect}
           selectedLanguage={userSelections.language} />
         )}
-        {currentScreen === "game" && <Game  userSelections={userSelections}/>}
+        {currentScreen === "game" && <Game  userSelections={userSelections} onReset={handleReset}/>}
         <Footer />
       </div>
     </div>
